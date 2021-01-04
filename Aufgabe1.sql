@@ -43,15 +43,20 @@ CREATE TABLE Professoren(
     HauptVL     INTEGER
 );
 
+-- Fremdschlüssel für gelesenVon
+
 ALTER TABLE Vorlesungen
 ADD CONSTRAINT FK_gelesenVon
 FOREIGN KEY (gelesenVon)
     REFERENCES Professoren(PersNr)
 ON DELETE NO ACTION;
 
+-- Fremdschlüssel für HauptVL
+
 ALTER TABLE Professoren
 ADD CONSTRAINT FK_Vorlesungen
 FOREIGN KEY (HauptVL)
     REFERENCES Vorlesungen(VorlNr)
 ON DELETE NO ACTION;
+
 

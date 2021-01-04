@@ -25,26 +25,26 @@ VALUES (29555, 'Feuerbach', 2);
  
 
 
-INSERT INTO Professoren(PersNr, Name, Rang, Raum) 
-VALUES (2125, 'Sokrates', 'W3', 226); 
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2125, 'Sokrates', 'W3', 226, 5041); 
 
-INSERT INTO Professoren(PersNr, Name, Rang, Raum) 
-VALUES (2126, 'Russel', 'W3', 232);  
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2126, 'Russel', 'W3', 232, 5043);  
  
-INSERT INTO Professoren(PersNr, Name, Rang, Raum) 
-VALUES (2127, 'Kopernikus', 'W2', 310); 
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2127, 'Kopernikus', 'W2', 310, 5556); 
  
-INSERT INTO Professoren(PersNr, Name, Rang, Raum) 
-VALUES (2133, 'Popper', 'W2', 052); 
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2133, 'Popper', 'W2', 052, 5259); 
  
-INSERT INTO Professoren(PersNr, Name, Rang, Raum) 
-VALUES (2134, 'Augustinus', 'W2', 309); 
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2134, 'Augustinus', 'W2', 309, 5022); 
  
-INSERT INTO Professoren(PersNr, Name, Rang, Raum) 
-VALUES (2136, 'Curie', 'W3', 036); 
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2136, 'Curie', 'W3', 036, 5555); 
  
-INSERT INTO Professoren(PersNr, Name, Rang, Raum) 
-VALUES (2137, 'Kant', 'W3', 007); 
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2137, 'Kant', 'W3', 007, 5001); 
  
  
  
@@ -98,7 +98,11 @@ VALUES (5022, 'Glaube und Wissen', 2, 2134);
 INSERT INTO Vorlesungen(VorlNr, Titel, SWS, gelesenVon) 
 VALUES (4630, 'Die 3 Kritiken', 4, 2137); 
 
+INSERT INTO Vorlesungen(VorlNr, Titel, SWS, gelesenVon) 
+VALUES (5555, 'Matritzen', 3, 2136); 
 
+INSERT INTO Vorlesungen(VorlNr, Titel, SWS, gelesenVon) 
+VALUES (5556, 'Sterne und Planeten', 5, 2127); 
  
  
 INSERT INTO hoeren(MatrNr, VorlNr) 
