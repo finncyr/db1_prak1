@@ -127,4 +127,12 @@ where
 -- "name"
 -- "Sokrates"
 -- "Kopernikus"
+---------------------------------------------------------
+-- Query 7
+select MatrNr from (select MatrNr, count(vorlnr) as Anzahl from hoeren group by MatrNr) as t2, (select count(VorlNr) as Anzahl from vorlesungen) as t1 where t1.Anzahl = t2.Anzahl;
 
+-- Ergebnis
+-- "matrnr"
+
+---------------------------------------------------------
+-- Query 8
