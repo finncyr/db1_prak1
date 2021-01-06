@@ -217,6 +217,7 @@ where
 -- Ergebnis
 -- "name"
 -- "Duplikat                        "
+---------------------------------------------------------
 -- Query 11 (versuch, funktioniert aber nicht)
 create view Hierarchie as (
     select
