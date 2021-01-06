@@ -136,3 +136,19 @@ select MatrNr from (select MatrNr, count(vorlnr) as Anzahl from hoeren group by 
 
 ---------------------------------------------------------
 -- Query 8
+select count(*) from pruefen where note = 1 or note = 2;
+
+-- Ergebnis
+-- 3
+---------------------------------------------------------
+-- Query 9
+select Studenten.matrnr, name, round(avg(note),1) as Durchschnitt from Studenten, pruefen where Studenten.matrnr = pruefen.matrnr group by Studenten.matrnr, name 
+
+-- Ergebnis
+-- "matrnr","name","durchschnitt"
+-- 25403,"Jonas                    ",2.0
+-- 27550,"Schopenhauer             ",2.0
+-- 28106,"Carnap                   ",1.0
+---------------------------------------------------------
+-- Query 10
+
