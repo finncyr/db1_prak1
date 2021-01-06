@@ -1,3 +1,5 @@
+BEGIN;
+
 CREATE TABLE Studenten(
     MatrNr      INTEGER PRIMARY KEY,
     Name        CHAR(25),
@@ -40,7 +42,7 @@ CREATE TABLE Professoren(
     Name        char(25),
     Rang        char(10) DEFAULT '001',
     Raum        INTEGER NOT NULL,
-    HauptVL     INTEGER
+    HauptVL     INTEGER 
 );
 
 -- Fremdschlüssel für gelesenVon
@@ -48,13 +50,25 @@ CREATE TABLE Professoren(
 ALTER TABLE Vorlesungen
 ADD CONSTRAINT FK_gelesenVon
 FOREIGN KEY (gelesenVon)
-    REFERENCES Professoren(PersNr)
-ON DELETE NO ACTION;
+    REFERENCES Professoren(PersNr) DEFERRABLE
+;
 
+-- Fremdschlüssel für HauptVL
+
+ALTER TABLE Professoren
+ADD CONSTRAINT FK_HauptVL
+FOREIGN KEY (HauptVL)
+    REFERENCES Vorlesungen(VorlNr) DEFERRABLE
+; 
+
+COMMIT;
 
 ------------------------------------------------------
 -- FÜLLEN DER TABELLE
 ------------------------------------------------------
+BEGIN;
+
+SET CONSTRAINTS ALL DEFERRED;
 
 
 INSERT INTO Studenten(MatrNr, Name, Semester) 
@@ -246,4 +260,4 @@ VALUES (25403, 5041, 2125, 2.0);
 INSERT INTO pruefen(MatrNr, VorlNr, PersNr, Note) 
 VALUES (27550, 4630, 2137, 2.0);
 
-
+COMMIT;
