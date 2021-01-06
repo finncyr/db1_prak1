@@ -225,8 +225,47 @@ VALUES (25403, 5022);
  
 INSERT INTO hoeren(MatrNr, VorlNr) 
 VALUES (29555, 5001);  
- 
- 
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5001); 
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5041);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5043);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5049);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 4052);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5052);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5216);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5259);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5022);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 4630);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5555);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 5556);
+
+INSERT INTO hoeren(MatrNr, VorlNr) 
+VALUES (29566, 4444);
+
+
  
 INSERT INTO voraussetzen(Vorgaenger, Nachfolger) 
 VALUES (5001, 5041); 

@@ -121,12 +121,14 @@ where
                             boss
                     ) as t1
             )
-    ) -- Ergebnis
-    -- "name"
-    -- "Sokrates"
-    -- "Kopernikus"
-    ---------------------------------------------------------
-    -- Query 7
+    )
+;
+-- Ergebnis
+-- "name"
+-- "Sokrates"
+-- "Kopernikus"
+---------------------------------------------------------
+-- Query 7
 select
     MatrNr
 from
@@ -150,6 +152,7 @@ where
 
 -- Ergebnis
 -- "matrnr"
+-- "29566"
 ---------------------------------------------------------
 -- Query 8
 select
@@ -186,14 +189,28 @@ create view avg_noten as (
 -- 28106,"Carnap                   ",1.0
 ---------------------------------------------------------
 -- Query 10
-select
+(select
     professoren.name
 from
-    professoren
-    inner join studenten on professoren.name = studenten.name
-    inner join assistenten on professoren.name = assistenten.name
-    or studenten.name = assistenten.name;
+    professoren,studenten
+where 
+	professoren.name = studenten.name) union
+(select
+    assistenten.name
+from
+    assistenten, professoren
+where 
+	assistenten.name = professoren.name) union
+(select
+    studenten.name
+from
+    studenten, assistenten
+where 
+	studenten.name = assistenten.name)
 
+-- Ergebnis
+-- "name"
+-- "Duplikat                        "
 -- Query 11 (versuch)
 create view Hierarchie as (
     select
