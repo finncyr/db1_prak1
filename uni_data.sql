@@ -23,6 +23,9 @@ VALUES (29120, 'Theophrastos', 2);
 INSERT INTO Studenten(MatrNr, Name, Semester) 
 VALUES (29555, 'Feuerbach', 2); 
  
+INSERT INTO Studenten(MatrNr, Name, Semester) 
+VALUES (29566, 'Duplikat', 2); 
+
 
 
 INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
@@ -46,7 +49,10 @@ VALUES (2136, 'Curie', 'W3', 036, 5555);
 INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
 VALUES (2137, 'Kant', 'W3', 007, 5001); 
  
- 
+INSERT INTO Professoren(PersNr, Name, Rang, Raum, HauptVL) 
+VALUES (2138, 'Duplikat', 'W3', 008, 5021, 4444);
+
+
  
 INSERT INTO Assistenten(PersNr, Name, Fachgebiet, Boss) 
 VALUES (3002, 'Platon', 'Ideenlehre', 2125); 
@@ -104,6 +110,9 @@ VALUES (5555, 'Matritzen', 3, 2136);
 INSERT INTO Vorlesungen(VorlNr, Titel, SWS, gelesenVon) 
 VALUES (5556, 'Sterne und Planeten', 5, 2127); 
  
+INSERT INTO Vorlesungen(VorlNr, Titel, SWS, gelesenVon) 
+VALUES (4444, 'Sterne und Planeten 2', 6, 2138); 
+
  
 INSERT INTO hoeren(MatrNr, VorlNr) 
 VALUES (26120, 5001); 
