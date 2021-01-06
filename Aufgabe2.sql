@@ -142,7 +142,7 @@ select count(*) from pruefen where note = 1 or note = 2;
 -- 3
 ---------------------------------------------------------
 -- Query 9
-create view avg_noten as (select Studenten.matrnr, name, round(avg(note),1) as Durchschnitt from Studenten, pruefen where Studenten.matrnr = pruefen.matrnr group by Studenten.matrnr, name )
+create view avg_noten as (select Studenten.matrnr, name, round(avg(note),1) as Durchschnitt from Studenten, pruefen where Studenten.matrnr = pruefen.matrnr group by Studenten.matrnr, name );
 
 -- Ergebnis
 -- "matrnr","name","durchschnitt"
@@ -152,5 +152,8 @@ create view avg_noten as (select Studenten.matrnr, name, round(avg(note),1) as D
 ---------------------------------------------------------
 -- Query 10
 
-select professoren.name from professoren inner join studenten on professoren.name = studenten.name inner join assistenten on professoren.name = assistenten.name or studenten.name = assistenten.name
+select professoren.name from professoren inner join studenten on professoren.name = studenten.name inner join assistenten on professoren.name = assistenten.name or studenten.name = assistenten.name;
 
+-- Query 11 (versuch)
+
+create view Hierarchie as (select vorgaenger, nachfolger as VorlNr from voraussetzen v1 union all select v2.vorgaenger, v2.nachfolger from voraussetzen v2 inner join voraussetzen v3 on v2.vorgaenger = v3.nachfolger);
