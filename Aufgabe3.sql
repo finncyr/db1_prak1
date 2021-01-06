@@ -1,3 +1,8 @@
+-- AUFGABE 3
+-- DB1 Praktikum WS20/21
+-- Ersteller: Cyriax, Finn
+-- GruppenNR: 14
+
 -- Query 7
 select
     MatrNr

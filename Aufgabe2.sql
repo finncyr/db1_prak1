@@ -1,3 +1,9 @@
+-- AUFGABE 2
+-- DB1 Praktikum WS20/21
+-- Ersteller: Cyriax, Finn
+-- GruppenNR: 14
+
+
 -- Query 1
 SELECT
     MatrNr

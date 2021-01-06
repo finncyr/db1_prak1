@@ -1,3 +1,8 @@
+-- AUFGABE 1
+-- DB1 Praktikum WS20/21
+-- Ersteller: Cyriax, Finn
+-- GruppenNR: 14
+
 BEGIN;
 
 CREATE TABLE Studenten(
